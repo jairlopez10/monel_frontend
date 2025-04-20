@@ -96,7 +96,8 @@ header {
   background-color: rgb(35, 61, 35);
   background-color: #304229;
   background-color: #aab4a617;
-  background-color: #aab4a61e;
+  background-color: #aab4a6be;
+  background-color: #aab4a677;
   padding: .7rem 2rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -201,14 +202,14 @@ footer img {
 }
 
 .num-noches {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #3d3d3d;
   font-style: italic;
 }
 
 .boton-reservar {
   background-color: #21a500;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   font-size: 2rem;
   color: white;
   margin-top: 1rem;
@@ -226,14 +227,14 @@ footer img {
 }
 
 .hosp-descripcion {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 1.5rem 0rem;
   font-style: italic;
   color: rgb(46, 44, 44);
 }
 
 .precio-antes {
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-top: 1rem;
   text-decoration: line-through;
   color: #808080;
@@ -241,7 +242,7 @@ footer img {
 
 .precio-actual {
   margin-top: 0rem;
-  font-size: 2.7rem;
+  font-size: 3rem;
   color: #3d3d3d;
 }
 
@@ -345,7 +346,7 @@ footer img {
 }
 
 .div-fecha label {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: #3d3d3d;
 }
 
@@ -364,11 +365,11 @@ footer img {
 }
 
 .tit-persona {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .desc-persona {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #3d3d3d;
   margin-left: .2rem;
 }
@@ -397,12 +398,12 @@ footer img {
 }
 
 .buscar-popup {
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   background-color: #0126cc;
-  padding: .5rem 1.5rem;
+  padding: .5rem 2.5rem;
   border-radius: 1rem;
   color: white;
 }
