@@ -98,6 +98,7 @@ header {
   background-color: #aab4a617;
   background-color: #aab4a6be;
   background-color: #aab4a677;
+  background-color: #004b96;
   padding: .7rem 2rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -106,6 +107,7 @@ header {
 .filtros p{
   font-size: 1rem;
   color: #a1a5a8;
+  color: #dbdbdb;
   display: flex;
   align-items: center;
 }
