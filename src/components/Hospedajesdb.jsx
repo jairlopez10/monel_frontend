@@ -22,15 +22,15 @@ const hospedajesdb = [
         images: [
             {
                 tipo: "imagen",
+                url: "/1c.webp" 
+            },
+            {
+                tipo: "imagen",
                 url: "/1a.webp" 
             },
             {
                 tipo: "imagen",
                 url: "/1b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/1c.webp" 
             },
             {
                 tipo: "imagen",

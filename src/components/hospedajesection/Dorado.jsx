@@ -3,11 +3,6 @@ const Dorado = () => {
   return (
     <>
         <div className="div-section">
-          <img src="/giff.gif" alt="" />
-          <h4>¡NO TIENES QUE MANEJAR MAS!</h4>
-          <p>Encuentra discotecas, restaurantes y bares a <span className=" font-bold">3 minutos</span> caminando</p>
-        </div>
-        <div className="div-section">
           <img src="/gif1a.gif" alt="" />
           <h4>¡IMAGINA DESPERTAR CON TRANQUILIDAD!</h4>
           <p>¡En tu <span className="font-bold">piscina, jacuzzi </span> en cualquier momento (24h)!</p>
@@ -28,12 +23,16 @@ const Dorado = () => {
           <p>¡Parrilla totalmente disponible para <span className="font-bold">carnivoros o vegetarianos</span>!</p>
         </div>
         <div className="div-section">
+          <img src="/giff.gif" alt="" />
+          <h4>¡NO TIENES QUE MANEJAR MAS!</h4>
+          <p>Encuentra discotecas, restaurantes y bares a <span className=" font-bold">3 minutos caminando</span></p>
+        </div>
+        <div className="div-section">
           <img src="/gif1c.gif" alt="" />
           <h4>¡LA MEJOR SEGURIDAD PARA TI!</h4>
           <p>¡Parqueadero privado y <span className="font-bold">camaras externas</span>!</p>
         </div>
         <div className="div-section">
-          <img src="/gif1c.gif" alt="" />
           <h4>¿Que es lo que incluye?</h4>
           <div className="lista-incluye">
             <ul >

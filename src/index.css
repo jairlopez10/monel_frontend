@@ -207,6 +207,28 @@ footer img {
   font-style: italic;
 }
 
+.background-fixed {
+  background-color: rgb(255, 255, 255);
+  padding: .5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.17);
+  -webkit-box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.17);
+  -moz-box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.17);
+}
+
+.total-fixed {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.fechas-fixed {
+  font-size: 1.2rem;
+}
+
 .boton-reservar {
   background-color: #21a500;
   padding: 1.5rem 2rem;
@@ -216,6 +238,11 @@ footer img {
   border-radius: 1rem;
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.botonfix {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .fijar-boton {
@@ -351,7 +378,6 @@ footer img {
 }
 
 .div-fecha input {
-  background-color: #cacaca;
   background-color: #e4e4e4;
   border-radius: 1rem;
   padding: .5rem 1rem;
@@ -408,3 +434,30 @@ footer img {
   color: white;
 }
 
+@media (min-width: 768px) {
+  .div-popup {
+    width: 50%;
+  }
+  .div-fecha input {
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+  }
+  .div-personas {
+    padding: 0rem 2rem;
+    margin-bottom: 1rem;
+  }
+  .div-boton-fixed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .div-popup {
+    width: 40%;
+  }
+  .div-personas {
+    padding: 0rem 3rem;
+  }
+}

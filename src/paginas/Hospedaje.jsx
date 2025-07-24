@@ -19,11 +19,33 @@ const Hospedaje = () => {
   const [multiactual, setmultiactual] = useState(hospedaje.images[0])
   const [visiblereservar, setVisiblereservar] = useState(true)
   const botonreservarref = useRef(null);
+  const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+  const [fechamostrar, setFechamostrar] = useState('')
   
   const section = {
     1: <Dorado />
   }
+
+  //Crea la fecha nuevamente para manipularla y la cola en formato local T00:00 
+  const fechainiciotemp = new Date(`${fechainicio}T00:00`)
+  const fechafintemp = new Date(`${fechafin}T00:00`)
   
+  const definirfechatexto = () => {
+
+    //Mismo mes
+    if(fechainiciotemp.getMonth() === fechafintemp.getMonth()) {
+      setFechamostrar(`${fechainiciotemp.getDate()} - ${fechafintemp.getDate()} ${meses[fechainiciotemp.getMonth()]}`)
+    } else {
+      setFechamostrar(`${fechainiciotemp.getDate()} ${meses[fechainiciotemp.getMonth()].slice(0,5)} - ${fechafintemp.getDate()} ${meses[fechafintemp.getMonth()].slice(0,5)} ${fechafintemp.getFullYear()}`)
+    }
+
+  }
+
+  useEffect(() => {
+    if(fechafin && fechainicio){
+      definirfechatexto()
+    }
+  }, [fechafin, fechainicio])
 
   if(hospedaje === false){
     navigate("/")
@@ -176,11 +198,21 @@ const Hospedaje = () => {
             <p className='precio-actual'>${total.toLocaleString('es-CO')}</p>
             <p className="oferta-text">40% DSTO</p>
           </div>
-          <p className='num-noches'>{noches.length + 1} Dias ({noches.length} Noches)</p>
+          <p className='num-noches'>{noches.length} Noches - {fechamostrar}</p>
+          
 
-          <button ref={botonreservarref} className='boton-reservar' onClick={() => agregarreserva()}>Reservar Ahora</button>
+          <button ref={botonreservarref} className='boton-reservar' onClick={() => agregarreserva()}>Reservar</button>
           {formulario ? "" : (
-            <button className={`${visiblereservar === true  ? 'hidden' : 'fijar-boton boton-reservar'}`} onClick={() => agregarreserva()}>Reservar Ahora</button>
+            <>
+              <div className={`${visiblereservar === true  ? 'hidden' : 'fijar-boton background-fixed'} `}>
+                <div className='div-boton-fixed'>
+                  <p className='total-fixed'>${total.toLocaleString('es-CO')}</p>
+                  <p className='fechas-fixed'>{noches.length} noches - {fechamostrar}</p>
+                </div>
+                <button className='boton-reservar botonfix' onClick={() => agregarreserva()}>Reservar</button>
+              </div>
+            </>
+            
           )}
           
           
